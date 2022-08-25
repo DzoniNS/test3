@@ -1,0 +1,121 @@
+/* koristi se za definisanje sirine elemenata na strani-border-box se navodi da browser uracunava i pedding i border u ukupno sirinu elementa */
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.header-image {
+    display: flex;
+    background: url(img/headerImg.jpg);
+    background-size: cover;
+    height: 300px;
+    color: white;
+    font-size:2em;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar {
+    display: flex;
+    background-color: darkgray;
+}
+
+.navbar a{
+    text-decoration: none;
+    color: white;
+    padding: 15px;
+    width: 25%;
+    text-align: center;
+
+}
+
+.navbar a:hover {
+    background-color: rgb(53, 52, 42);
+    color: black;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.side {
+    flex:25%;
+    background-color: cornflowerblue;
+    padding: 20px;
+}
+
+.aboutme-img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    }
+
+.company-container {
+    text-align: centar;
+}
+.company-container > img{
+    width: 100%;
+    height: auto;
+    max-width: 300px;
+}
+
+.main {
+    flex: 75%;
+    padding: 20px;
+}
+
+.blog-img{
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
+
+.footer {
+    padding: 5px;
+    background-color: darkgray;
+    text-align: center;
+    color: white;
+}
+
+@media screen and (max-width: 780px) {
+        .header-image {
+            height: 200px;
+            font-size: 1em; 
+        }
+        .navbar a {
+            padding: 5px;
+        }
+}
+
+@media  screen and (max-width: 604px) {
+    .row, .navbar {
+        flex-direction: column;
+            }
+            .navbar a {
+                padding: 5px;
+                width: 100%;
+            }
+    .side, .main {
+        text-align: center;
+    }
+    .aboutme-img {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width:375px) {
+    .header-image {
+        height: 150px;
+        font-size: 0.7em;
+    }
+    .navbar a {
+        padding: 2px;
+        font-size: 0.8em;
+}
+}
